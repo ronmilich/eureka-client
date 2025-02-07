@@ -6,7 +6,7 @@ type ProtectedRouteProps = {
   children: React.ReactNode;
 };
 
-export function ProtectedRoute({ children }: ProtectedRouteProps) {
+export default function ProtectedRoute({ children }: ProtectedRouteProps) {
   if (!user.value) {
     return <Navigate to="/login" replace />;
   }

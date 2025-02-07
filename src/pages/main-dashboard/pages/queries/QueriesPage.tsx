@@ -16,6 +16,7 @@ import ProblegtmItem from '../problems/components/ProblemItem/ProblemItem';
 import { InsightsFormDialog, ProblemsFormDialog, RawIdeasFormDialog } from 'src/common/modals';
 import { SelectFilterItem } from 'src/common/components/SelectFilter/SelectFilter';
 import { useDebouncedValue } from 'src/common/hooks';
+import { HighlightText } from 'src/common/components';
 
 type Dialogs = 'none' | 'problems' | 'insights' | 'rawIdeas';
 

@@ -9,7 +9,7 @@ import {
   listItemTextClasses,
   listItemButtonClasses,
 } from '@mui/material';
-import { Insights, PsychologyAlt, Gesture, SpeakerNotes, QueryStats } from '@mui/icons-material';
+import { Insights, PsychologyAlt, Gesture, QueryStats } from '@mui/icons-material';
 import { tss } from 'tss-react/mui';
 import { useNavigate } from 'react-router';
 import { appDrawer } from 'src/common/store';
@@ -35,14 +35,9 @@ const navigationItems = [
     Icon: Gesture,
     path: '/main-dashboard/raw-ideas',
   },
-  {
-    label: 'General Notes',
-    Icon: SpeakerNotes,
-    path: '/main-dashboard/notes',
-  },
 ];
 
-const AppDrawer = () => {
+const MainDashboardDrawer = () => {
   const { classes: c } = useStyles();
   const navigate = useNavigate();
 
@@ -73,7 +68,7 @@ const AppDrawer = () => {
   );
 };
 
-export default AppDrawer;
+export default MainDashboardDrawer;
 
 const useStyles = tss.create(({ theme }) => ({
   drawer: {

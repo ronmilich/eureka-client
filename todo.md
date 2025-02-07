@@ -16,11 +16,8 @@
 - Basic tasks management
 - Connect tasks with problems, insights, ideas
 
-## Finding ideas management:
-- Problems management, include tags, references
-- Insights management, include tags, references
-- Ideas List
-- Idea management - include tags, references, advance text editor
+## Finding ideas dashboard:
+- search 
 
 ## Golas Tracker
 - Goal setting

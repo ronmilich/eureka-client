@@ -1,0 +1,7 @@
+/* .highlight {
+  background-color: #ffecb2;
+} */
+
+.highlight {
+    background-color: var(--highlight-color, #ffecb2);
+  }

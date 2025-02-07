@@ -4,9 +4,10 @@ import api from './common/api';
 import { AuthStateActions } from './common/store';
 import { Route, Routes } from 'react-router';
 import LoginPage from './pages/login-page/LoginPage';
-import { ProtectedRoute } from './common/components/ProtectedRoute/ProtectedRoute';
 
 import MainDashboard from './pages/main-dashboard/Main-Dashboard';
+import { ProtectedRoute } from './common/components';
+import IdeasDashboard from './pages/ideas-dashboard/IdeasDashboard';
 
 function App() {
   const { isLoading } = useQuery({
@@ -33,6 +34,7 @@ function App() {
             <ProtectedRoute>
               <Routes>
                 <Route path="/main-dashboard/*" element={<MainDashboard />} />
+                <Route path="/ideas-dashboard/*" element={<IdeasDashboard />} />
               </Routes>
             </ProtectedRoute>
           }

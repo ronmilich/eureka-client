@@ -3,7 +3,7 @@ import { Box, IconButton, Typography } from '@mui/material';
 import { appMode, uiStateActions } from 'src/common/store';
 import { tss } from 'tss-react/mui';
 
-const Header = () => {
+const MainDashboardHeader = () => {
   const { classes: c } = useStyles();
 
   return (
@@ -24,7 +24,7 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default MainDashboardHeader;
 
 const useStyles = tss.create(({ theme }) => ({
   header: {
