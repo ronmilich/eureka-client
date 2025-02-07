@@ -1,44 +1,21 @@
-import { DarkMode, LightMode, Menu } from '@mui/icons-material';
-import { Box, IconButton, Typography } from '@mui/material';
-import { appMode, uiStateActions } from 'src/common/store';
-import { tss } from 'tss-react/mui';
+import { Menu as MenuIcon } from '@mui/icons-material';
+import { Box, Button, IconButton } from '@mui/material';
+import { useNavigate } from 'react-router';
+import { uiStateActions } from 'src/common/store';
 
 const MainDashboardHeader = () => {
-  const { classes: c } = useStyles();
+  const navigate = useNavigate();
 
   return (
-    <Box className={c.header}>
-      <Box className={c.alignment}>
-        <IconButton onClick={() => uiStateActions.toggleDrawer()}>
-          <Menu />
-        </IconButton>
-        <Typography variant="h6">Hello Ron Milich</Typography>
-      </Box>
-
-      <Box className={c.alignment}>
-        <IconButton onClick={() => uiStateActions.toggleMode()}>
-          {appMode.value === 'light' ? <DarkMode /> : <LightMode />}
-        </IconButton>
-      </Box>
+    <Box sx={{ display: 'flex', alignItems: 'center' }}>
+      <IconButton onClick={() => uiStateActions.toggleDrawer()}>
+        <MenuIcon />
+      </IconButton>
+      <Button variant="text" onClick={() => navigate('/ideas-dashboard')}>
+        To Ideas Dashboard
+      </Button>
     </Box>
   );
 };
 
 export default MainDashboardHeader;
-
-const useStyles = tss.create(({ theme }) => ({
-  header: {
-    display: 'flex',
-    width: '100%',
-    height: theme.spacing(10),
-    padding: theme.spacing(0, 2),
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    backgroundColor: theme.palette.background.default,
-    borderBottom: `1px solid ${theme.palette.divider}`,
-  },
-  alignment: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-}));

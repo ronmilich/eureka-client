@@ -8,6 +8,7 @@ import LoginPage from './pages/login-page/LoginPage';
 import MainDashboard from './pages/main-dashboard/Main-Dashboard';
 import { ProtectedRoute } from './common/components';
 import IdeasDashboard from './pages/ideas-dashboard/IdeasDashboard';
+import AppLayout from './pages/AppLayout';
 
 function App() {
   const { isLoading } = useQuery({
@@ -32,10 +33,7 @@ function App() {
           path="/*"
           element={
             <ProtectedRoute>
-              <Routes>
-                <Route path="/main-dashboard/*" element={<MainDashboard />} />
-                <Route path="/ideas-dashboard/*" element={<IdeasDashboard />} />
-              </Routes>
+              <AppLayout />
             </ProtectedRoute>
           }
         />
