@@ -26,3 +26,12 @@
 - Goal setting
 - Goal tracking
 - Goal Analysis and statistics
+
+#### POSSIBLE FEATURES:
+
+- SECTOR/INDUSTRY ANALYSIS AND PROBLEMS
+- Sector/Industry predictions (based on data), who is influencing the sector and so on.
+- list of top problems in the sector
+- each problem details - description, solutions, insights, ideas
+- Discussing ways the idea fails/succeeds to solve the problem.
+- Alternative solutions to the problem

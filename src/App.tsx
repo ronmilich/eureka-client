@@ -5,9 +5,7 @@ import { AuthStateActions } from './common/store';
 import { Route, Routes } from 'react-router';
 import LoginPage from './pages/login-page/LoginPage';
 
-import MainDashboard from './pages/main-dashboard/Main-Dashboard';
 import { ProtectedRoute } from './common/components';
-import IdeasDashboard from './pages/ideas-dashboard/IdeasDashboard';
 import AppLayout from './pages/AppLayout';
 
 function App() {

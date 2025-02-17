@@ -1,4 +1,5 @@
 import { AuthApi } from './auth-api';
+import { IdeasApi } from './ideas-api';
 import { InsightsApi } from './insights-api';
 import { ProblemsApi } from './problems-api';
 import { QueriesApi } from './queries-api';
@@ -12,6 +13,7 @@ interface ApiService {
   insights: InsightsApi;
   rawIdeas: RawIdeasApi;
   queries: QueriesApi;
+  ideas: IdeasApi;
 }
 
 class Api implements ApiService {
@@ -21,6 +23,7 @@ class Api implements ApiService {
   insights = new InsightsApi();
   rawIdeas = new RawIdeasApi();
   queries = new QueriesApi();
+  ideas = new IdeasApi();
 }
 
 export default new Api();
