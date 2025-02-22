@@ -1,7 +1,13 @@
-## IDEAS DASHBOARD
+## IDEAS LIST PAGE
 
-- Ideas schema + CRUD
-- ideas list page - list, recently viewed, Create idea
+features:
+
+- recently viewed
+- Create idea
+- Searching, Fillters and sorting
+- Define scoring mechanism
+- Change risk profile - number of issues and tooltips with numbers breakdown
+- Add deleteing action - with a warning dialog
 
 ## MAIN DASHBOARD
 
@@ -13,8 +19,6 @@
 ## CHECK LATER FEATURE
 
 - a floating button that unfolds to a widget that is like a fast notes and links to check later
-
----
 
 ## Tasks management:
 

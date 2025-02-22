@@ -21,7 +21,7 @@ export const ideasListTableColDef: GridColDef<SlimIdea>[] = [
   {
     field: 'metadata.createdAt',
     disableColumnMenu: true,
-    headerName: 'Created At',
+    headerName: 'Creation Date',
     flex: 0.5,
     renderCell: ({ row }) => (
       <Box sx={{ alignContent: 'center', height: '100%' }}>
@@ -44,7 +44,7 @@ export const ideasListTableColDef: GridColDef<SlimIdea>[] = [
     headerName: 'Feasibility',
     disableColumnMenu: true,
     sortable: false,
-    flex: 0.7,
+    flex: 0.4,
     renderCell: ({ row }) => <SlimIdeasTableFeasibilityCell slimIdea={row} />,
   },
   {

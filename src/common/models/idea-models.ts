@@ -5,7 +5,7 @@
 import { Tag } from './tag-models';
 
 /** Difficulty level for executing an idea */
-export type Difficulty = 'easy' | 'medium' | 'hard' | 'very hard';
+export type Difficulty = 'Easy' | 'Medium' | 'Hard' | 'Very Hard';
 
 /** Gender options for customer segments */
 export type Gender = 'male' | 'female' | 'both';
@@ -41,22 +41,30 @@ export type MonetizationStrategyType =
  * This set includes digital, physical, and hybrid service categories to cover most business models.
  */
 export type ServiceType =
-  | 'mobile-app' // Applications designed for mobile devices.
-  | 'web-app' // Applications accessed via web browsers.
-  | 'desktop-app' // Applications installed on desktop computers.
+  | 'Mobile App' // Applications designed for mobile devices.
+  | 'Web App' // Applications accessed via web browsers.
+  | 'Desktop App' // Applications installed on desktop computers.
   | 'SaaS' // Software as a Service model.
   | 'API' // An interface for programmatic access.
-  | 'platform' // A system that connects users, services, or products.
-  | 'physical-product' // Tangible products.
-  | 'hardware' // Electronic or mechanical devices.
-  | 'iot-device' // Internet-connected hardware.
-  | 'subscription-box' // Curated physical products delivered periodically.
-  | 'service' // General service offerings not covered by the above.
-  | 'consulting' // Advisory or expert consulting services.
-  | 'other'; // Any other type not specified above.
+  | 'Platform' // A system that connects users, services, or products.
+  | 'Physical Product' // Tangible products.
+  | 'Hardware' // Electronic or mechanical devices.
+  | 'Iot Device' // Internet-connected hardware.
+  | 'Subscription Box' // Curated physical products delivered periodically.
+  | 'Service' // General service offerings not covered by the above.
+  | 'Consulting' // Advisory or expert consulting services.
+  | 'Other'; // Any other type not specified above.
 
 /** Impact level for risks, constraints, or challenges */
 export type Impact = 'low' | 'medium' | 'high';
+
+export type IdeaStatus =
+  | 'Draft'
+  | 'Validated'
+  | 'In Development'
+  | 'Launched'
+  | 'Approved'
+  | 'Rejected';
 
 /////////////////////////////
 // Core Idea and Related Interfaces
@@ -99,7 +107,7 @@ export interface IdeaMetadata {
   /** Computed quality or viability score */
   score: number;
   /** Current status of the idea */
-  status: 'draft' | 'validated' | 'in-development' | 'launched' | 'rejected';
+  status: IdeaStatus;
   /** Array of tag references for categorization */
   tags: Tag[];
   /** Date the idea was created */

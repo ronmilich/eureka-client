@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Tooltip, Typography } from '@mui/material';
 import { SlimIdea } from 'src/common/models';
 import { convertDays } from 'src/common/utils';
 
@@ -6,14 +6,31 @@ interface SlimIdeasTableFeasibilityCellProps {
   slimIdea: SlimIdea;
 }
 
-const SlimIdeasTableFeasibilityCell = ({ slimIdea }: SlimIdeasTableFeasibilityCellProps) => {
+const SlimIdeasTableFeasibilityCell = ({
+  slimIdea: { feasibility },
+}: SlimIdeasTableFeasibilityCellProps) => {
   return (
     <Box sx={{ height: '100%', alignContent: 'center' }}>
-      {slimIdea.feasibility ? (
-        <Typography variant="body2" noWrap sx={{ textTransform: 'capitalize' }}>
-          {slimIdea.feasibility?.difficulty} -{' '}
-          {convertDays(slimIdea.feasibility?.estimatedDevelopmentTime)}
-        </Typography>
+      {feasibility ? (
+        <Tooltip
+          title={
+            feasibility?.estimatedDevelopmentTime
+              ? convertDays(feasibility?.estimatedDevelopmentTime)
+              : null
+          }
+        >
+          <Typography
+            width="fit-content"
+            variant="body2"
+            noWrap
+            sx={(theme) => ({
+              textTransform: 'capitalize',
+              color: feasibility?.estimatedDevelopmentTime ? theme.palette.primary.main : 'default',
+            })}
+          >
+            {feasibility?.difficulty}
+          </Typography>
+        </Tooltip>
       ) : (
         <Typography variant="body2" noWrap>
           Not Defined
